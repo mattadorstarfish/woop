@@ -2,7 +2,8 @@
   "name": "flicker/wordpress-oop",
   "type": "library",
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.3"
+    "squizlabs/php_codesniffer": "^3.3",
+    "phpunit/phpunit": "^6.5"
   },
   "license": "MIT",
   "authors": [
@@ -14,7 +15,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "app\\": "app/"
+      "Woop\\": "app/"
     }
   }
 }
