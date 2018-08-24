@@ -14,4 +14,18 @@ use PHPUnit\Framework\TestCase;
 class ShortCodeTest extends TestCase
 {
 
+    public function test__construct()
+    {
+
+    }
+
+    public function testGetAttributesFromShortCode()
+    {
+
+    }
+
+    public function testRender()
+    {
+
+    }
 }

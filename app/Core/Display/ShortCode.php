@@ -1,15 +1,46 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Flicker
- * Date: 2018/08/24
- * Time: 13:29
- */
 
 namespace Woop\Core\Display;
 
+use Woop\Core\Entity;
 
-class Shortcode
+/**
+ * Class ShortCode
+ * @package Woop\Core\Display
+ */
+class ShortCode
 {
+    /**
+     * @var \Woop\Core\Entity $entity
+     */
+    public $entity;
 
+    /**
+     * ShortCode constructor.
+     * @param \Woop\Core\Entity $entity
+     */
+    public function __construct(Entity $entity)
+    {
+        $this->entity = $entity;
+    }
+
+    /**
+     * Get attributes from the short code string
+     * @param array $attributes
+     * @return array
+     */
+    public function getAttributesFromShortCode($attributes)
+    {
+        return $attributes;
+    }
+
+    /**
+     * Renders the short code content
+     *
+     * @return string
+     */
+    public function render()
+    {
+        return '';
+    }
 }
