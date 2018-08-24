@@ -26,11 +26,7 @@ jobs:
 
     - run:
         name: PHP - Unit Tests
-        command: php ~/.composer/vendor/bin/phpunit --coverage-clover build/coverage/xml
-
-    - run:
-        name: Codacy - Code Coverage
-        command: php  ~/.composer/vendor/bin/codacycoverage clover build/coverage/xml
+        command: php ~/.composer/vendor/bin/phpunit ./tests
 
 workflows:
   version: 2
