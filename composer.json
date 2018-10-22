@@ -1,9 +1,7 @@
 {
-  "name": "flicker/wordpress-oop",
+  "name": "flickerleap/woop",
+  "version": "0.1.0",
   "type": "library",
-  "require-dev": {
-    "phpunit/phpunit": "^6.5"
-  },
   "license": "MIT",
   "authors": [
     {
@@ -13,6 +11,9 @@
   ],
   "require": {
     "johnpbloch/wordpress": "^4.9.8"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
   },
   "autoload": {
     "psr-4": {
