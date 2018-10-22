@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Flicker
- * Date: 2018/08/24
- * Time: 14:00
- */
 
 namespace Woop\Core\Display;
 
 use Woop\Config\FieldConfig;
+use Woop\Display\Input\Text;
 use Woop\Helpers\StringHelper;
 
 /**
@@ -162,9 +157,9 @@ class Field
     /**
      * @param $type
      * @param string $namespace
-     * @return \tapit\layout\input\Text
+     * @return \Woop\Core\Display\Input
      */
-    public function getInputObject($type, $namespace = '\tapit\layout\input\\')
+    public function getInputObject($type, $namespace = '\Woop\Display\Input\\')
     {
         $class = $namespace . StringHelper::snakeToClass($type);
         if (class_exists($class)) {

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Flicker
- * Date: 2018/08/24
- * Time: 14:57
- */
 
 namespace tests\core\display;
 
