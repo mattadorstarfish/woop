@@ -33,7 +33,9 @@ class ImageList extends Input
         foreach ($urls as $i => $url) {
             $elem_id = "image" . $i;
             $html .= $this->renderImage(
-                $elem_id, $url, [
+                $elem_id,
+                $url,
+                [
                 'class' => 'image'
                 ]
             );
@@ -51,5 +53,4 @@ class ImageList extends Input
 
         return $element;
     }
-
 }

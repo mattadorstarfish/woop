@@ -27,5 +27,4 @@ class Dropdown extends Input
     {
         return "<select name='{$id}' id='{$id}' value='{$value}' type='{$this->type}' {$this->getEditable($params)}/>";
     }
-
 }

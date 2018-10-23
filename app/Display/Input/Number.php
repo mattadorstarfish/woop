@@ -27,5 +27,4 @@ class Number extends Input
     {
         return "<input name='{$id}' id='{$id}' type='{$this->type}' value='{$value}' {$this->getEditable($params)}/>";
     }
-
 }

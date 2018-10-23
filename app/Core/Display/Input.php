@@ -44,7 +44,7 @@ abstract class Input
      * @param array $params
      * @return mixed
      */
-    public abstract function render($id, $value, $params = []);
+    abstract public function render($id, $value, $params = []);
 
     /**
      * @param array $params

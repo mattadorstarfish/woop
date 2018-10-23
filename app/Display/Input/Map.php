@@ -23,7 +23,8 @@ class Map extends Input
         $config = array_merge(
             [
             'zoom'=>14
-            ], $params
+            ],
+            $params
         );
         $element = "<div id='$id' {$class}></div>";
         $popup = "<div class='map-popup' id='popup-container'></div>";
@@ -45,5 +46,4 @@ JS;
 
         return '<script type="text/javascript">' . $js . '</script>';
     }
-
 }
