@@ -9,10 +9,16 @@
 namespace Woop\Core\Entity;
 
 use Woop\Config\EntityConfig;
-use Woop\Core\Entity;
+use Woop\Data\PostMeta;
 
 abstract class PostType extends Entity
 {
+    /**
+     *
+     * @var \Woop\Data\PostMeta $meta
+     */
+    protected $meta;
+
     /**
      * PostType constructor.
      * @param \Woop\Config\EntityConfig $config
@@ -20,6 +26,8 @@ abstract class PostType extends Entity
     public function __construct(EntityConfig $config)
     {
         parent::__construct($config);
+
+        $this->setFields();
     }
 
     /**
@@ -39,7 +47,17 @@ abstract class PostType extends Entity
     }
 
     /**
-     * @return array
+     *
+     */
+    public function setFields()
+    {
+        $config = $this->getFieldConfig();
+
+        $this->meta = new PostMeta($this->config->getSingular(), $this->slug, $config);
+    }
+
+    /**
+     * @return \Woop\Config\FieldConfig[]
      */
     abstract public function getFieldConfig();
 
@@ -59,7 +77,8 @@ abstract class PostType extends Entity
     public function getArgs()
     {
         $args = parent::getArgs();
-        $entity = $this->config->slug;
+        $entity = $this->config->getSlug();
+
         return array_merge(
             $args,
             [
