@@ -79,7 +79,7 @@ class Field
     {
         $this->config = $config;
         $this->name = $config->getName();
-        $this->label = $config->getLabel() && $this->getLabel($this->name);
+        $this->label = !empty($config->getLabel()) ? $config->getLabel() : $this->getLabel($this->name);
         $this->slug = $this->prefix . $this->formatName();
         $this->type = $config->getType();
         $this->inputType = $config->getInputType();
