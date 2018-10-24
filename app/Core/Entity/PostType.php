@@ -9,7 +9,6 @@
 namespace Woop\Core\Entity;
 
 use Woop\Config\EntityConfig;
-use Woop\Core\Entity;
 use Woop\Data\PostMeta;
 
 abstract class PostType extends Entity

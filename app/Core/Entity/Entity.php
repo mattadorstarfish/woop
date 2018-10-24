@@ -1,6 +1,6 @@
 <?php
 
-namespace Woop\Core;
+namespace Woop\Core\Entity;
 
 use Woop\Config\EntityConfig;
 
