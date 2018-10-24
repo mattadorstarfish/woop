@@ -67,12 +67,6 @@ class Field
 
     /**
      *
-     * @var bool
-     */
-    public $editable;
-
-    /**
-     *
      * @var string $prefix
      */
     protected $prefix = '';
@@ -84,13 +78,11 @@ class Field
     public function __construct(FieldConfig $config)
     {
         $this->config = $config;
-        $this->name = $config->name;
-        $this->label = $config->label && $this->getLabel($this->name);
+        $this->name = $config->getName();
+        $this->label = $config->getLabel() && $this->getLabel($this->name);
         $this->slug = $this->prefix . $this->formatName();
-        $this->type = $config->type;
-        $this->inputType = $config->inputType;
-        $this->editable = $this->isEditable();
-        $this->config['editable'] = $this->editable;
+        $this->type = $config->getType();
+        $this->inputType = $config->getInputType();
     }
 
     /**
@@ -175,7 +167,7 @@ class Field
      */
     public function isEditable()
     {
-        return $this->config->editable;
+        return $this->config->isEditable();
     }
 
     /**
@@ -183,6 +175,6 @@ class Field
      */
     public function isDisplayable()
     {
-        return $this->config->displayable;
+        return $this->config->isDisplayable();
     }
 }

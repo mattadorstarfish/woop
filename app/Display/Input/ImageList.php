@@ -1,28 +1,29 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace Woop\Display\Input;
 
 use Woop\Core\Display\Input;
 
 /**
- * Description of ImageList
- *
- * @author Flicker
+ * Class ImageList
+ * @package Woop\Display\Input
  */
 class ImageList extends Input
 {
-
+    /**
+     * ImageList constructor.
+     */
     public function __construct()
     {
         parent::__construct("image_list");
     }
 
+    /**
+     * @param string $id
+     * @param mixed $value
+     * @param array $params
+     * @return mixed|string
+     */
     public function render($id, $value, $params = [])
     {
         $urls = explode(',', $value);
@@ -45,6 +46,12 @@ class ImageList extends Input
         return $html;
     }
 
+    /**
+     * @param string $id
+     * @param mixed $value
+     * @param array $params
+     * @return string
+     */
     public function renderImage($id, $value, $params = [])
     {
         $class = array_key_exists("class", $params) ? "class='{$params["class"]}'" : "";

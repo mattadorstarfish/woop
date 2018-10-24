@@ -59,7 +59,8 @@ abstract class PostType extends Entity
     public function getArgs()
     {
         $args = parent::getArgs();
-        $entity = $this->config->slug;
+        $entity = $this->config->getSlug();
+
         return array_merge(
             $args,
             [
