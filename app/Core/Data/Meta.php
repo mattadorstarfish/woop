@@ -1,14 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Flicker
- * Date: 2018/08/24
- * Time: 13:54
- */
 
 namespace Woop\Core\Data;
 
-use Woop\Config\FieldConfig;
 use Woop\Core\Display\Field;
 
 /**
@@ -50,7 +43,7 @@ abstract class Meta
      *
      * @param string $name
      * @param string $type
-     * @param FieldConfig[] $fieldConfig
+     * @param \Woop\Config\FieldConfig[] $fieldConfig
      * @param string $suffix
      */
     public function __construct($name, $type, $fieldConfig = [], $suffix = '')
@@ -77,7 +70,7 @@ abstract class Meta
     /**
      *
      * @param int $id Entity ID.
-     * @return null
+     * @return bool
      */
     abstract public function save($id);
 
@@ -121,9 +114,7 @@ abstract class Meta
     }
 
     /**
-     *
-     *
-     * @param FieldConfig[] $fieldConfig
+     * @param \Woop\Config\FieldConfig[] $fieldConfig
      */
     public function setFields($fieldConfig = [])
     {

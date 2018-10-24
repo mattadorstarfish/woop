@@ -14,7 +14,7 @@ class PostMeta extends Meta
      * PostMeta constructor.
      * @param string $name
      * @param string $type
-     * @param array $fields
+     * @param \Woop\Config\FieldConfig[] $fields
      * @param $suffix
      */
     public function __construct($name, $type, $fields = [], $suffix = '')
