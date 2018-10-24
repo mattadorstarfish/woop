@@ -10,7 +10,6 @@ use Woop\Core\Display\Input;
  */
 class Dropdown extends Input
 {
-
     /**
      * Dropdown constructor.
      */
