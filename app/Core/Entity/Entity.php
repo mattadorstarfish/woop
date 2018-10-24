@@ -97,10 +97,10 @@ abstract class Entity
             'capability_type' => 'post',
             'has_archive' => true,
             'hierarchical' => false,
-            'menu_position' => null,
+            'menu_position' => 5,
             'show_in_rest' => true,
             'rest_base' => strtolower($this->config->getSlug()),
-            'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
         ];
     }
 
