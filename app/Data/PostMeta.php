@@ -46,8 +46,15 @@ class PostMeta extends Meta
      */
     public function add()
     {
-        \add_meta_box($this->slug, __($this->name, 'textdomain'), [$this, 'display'], $this->type, $this->context,
-            $this->priority, []);
+        \add_meta_box(
+            $this->slug,
+            __($this->name, 'textdomain'),
+            [$this, 'display'],
+            $this->type,
+            $this->context,
+            $this->priority,
+            []
+        );
     }
 
     /**
