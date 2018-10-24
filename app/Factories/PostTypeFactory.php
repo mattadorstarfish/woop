@@ -5,14 +5,14 @@ namespace Woop\Factories;
 use Woop\Core\Components\Factory;
 
 /**
- * Class ModelFactory
+ * Class PostTypeFactory
  * @package Woop\Factories
  */
-class ModelFactory extends Factory
+class PostTypeFactory extends Factory
 {
     /**
-     * ModelFactory constructor.
-     * @param string $className
+     * PostTypeFactory constructor.
+     * @param $className
      */
     public function __construct($className)
     {
