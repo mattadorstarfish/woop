@@ -11,6 +11,16 @@ use Woop\Core\Data\Meta;
 class PostMeta extends Meta
 {
     /**
+     * @var string
+     */
+    public $context = 'normal';
+
+    /**
+     * @var string
+     */
+    public $priority = 'high';
+
+    /**
      * PostMeta constructor.
      * @param string $name
      * @param string $type
@@ -29,6 +39,15 @@ class PostMeta extends Meta
     {
         \add_action('add_meta_boxes', [$this, 'add']);
         \add_action('save_post', [$this, 'save'], 10, 2);
+    }
+
+    /**
+     *
+     */
+    public function add()
+    {
+        \add_meta_box($this->slug, __($this->name, 'textdomain'), [$this, 'display'], $this->type, $this->context,
+            $this->priority, []);
     }
 
     /**
